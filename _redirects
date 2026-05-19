@@ -1,0 +1,9 @@
+# Cloudflare Pages _redirects
+# Redirect www to non-www (configure DNS accordingly)
+https://www.markenovadigital.com/* https://markenovadigital.com/:splat 301
+
+# Redirect HTTP to HTTPS (Cloudflare handles this automatically,
+# but explicit redirects can be added here if needed)
+
+# Catch-all: send everything to the single-page app
+/*  /index.html  200
