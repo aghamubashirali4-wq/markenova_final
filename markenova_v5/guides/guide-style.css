@@ -1,0 +1,381 @@
+/* ===================================================
+   MARKENOVA GUIDE STYLES
+   For lead magnet HTML guides
+   =================================================== */
+
+.guide-body { background: var(--black); }
+
+.guide-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 0.5px solid var(--black-4);
+  padding: 0.8rem 0;
+}
+.guide-nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.guide-nav .logo-mark-img { width: 42px; height: 42px; }
+.guide-nav .logo-name { font-size: 0.95rem; }
+.guide-nav .logo-sub { font-size: 0.48rem; }
+
+.guide-nav-actions { display: flex; gap: 0.6rem; align-items: center; }
+.btn-small {
+  font-family: var(--font-condensed);
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 0.55rem 1rem; border-radius: var(--radius);
+  background: transparent; color: var(--gray-3);
+  border: 0.5px solid var(--black-4);
+  cursor: pointer; transition: all var(--transition);
+  text-decoration: none;
+}
+.btn-small:hover { border-color: var(--red); color: var(--white); }
+.btn-small-primary { background: var(--red); color: var(--white-pure); border-color: var(--red); }
+.btn-small-primary:hover { background: var(--red-light); border-color: var(--red-light); color: var(--white-pure); }
+
+.guide-article { padding-bottom: 4rem; }
+
+.guide-hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 0.5px solid var(--black-3);
+  position: relative;
+  overflow: hidden;
+}
+.guide-hero::before {
+  content: '';
+  position: absolute;
+  top: 30%; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, rgba(192,0,48,0.08), transparent 70%);
+  pointer-events: none;
+}
+.guide-hero .container { position: relative; z-index: 1; }
+
+.guide-meta {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.5rem; flex-wrap: wrap;
+}
+.guide-tag {
+  font-family: var(--font-condensed);
+  font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--red);
+  border: 0.5px solid var(--red);
+  padding: 4px 10px; border-radius: 2px;
+}
+.guide-date {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: var(--gray-2);
+}
+
+.guide-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  color: var(--white);
+  margin-bottom: 1.4rem;
+  max-width: 900px;
+  line-height: 1.2;
+}
+
+.guide-lede {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-style: italic;
+  color: var(--gray-4);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+
+.guide-toc {
+  background: var(--black-2);
+  border-left: 2px solid var(--red);
+  padding: 1.5rem 1.8rem;
+  border-radius: 0 4px 4px 0;
+  max-width: 720px;
+}
+.guide-toc strong {
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.guide-toc ul {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  padding-left: 0;
+}
+.guide-toc li {
+  font-size: 0.88rem;
+  color: var(--gray-3);
+  font-weight: 300;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+.guide-toc li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.guide-content { max-width: 780px; padding-top: 3rem; }
+
+.guide-section { margin-bottom: 3rem; }
+.guide-section h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  color: var(--white);
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.5px solid var(--black-3);
+}
+.guide-section p {
+  font-size: 1rem;
+  color: var(--gray-3);
+  font-weight: 300;
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+}
+.guide-section p strong { color: var(--white); font-weight: 500; }
+
+.guide-list {
+  display: flex; flex-direction: column; gap: 0.8rem;
+  margin-bottom: 1.4rem;
+  padding-left: 0;
+}
+.guide-list li {
+  font-size: 0.95rem;
+  color: var(--gray-3);
+  font-weight: 300;
+  line-height: 1.75;
+  padding-left: 1.4rem;
+  position: relative;
+}
+.guide-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.65rem;
+  width: 14px; height: 0.5px;
+  background: var(--red);
+}
+.guide-list li strong { color: var(--white); font-weight: 500; }
+
+.guide-numbered {
+  display: flex; flex-direction: column; gap: 0.9rem;
+  margin-bottom: 1.4rem;
+  padding-left: 0;
+  counter-reset: guide-counter;
+}
+.guide-numbered li {
+  font-size: 0.95rem;
+  color: var(--gray-3);
+  font-weight: 300;
+  line-height: 1.75;
+  padding-left: 2.4rem;
+  position: relative;
+  counter-increment: guide-counter;
+}
+.guide-numbered li::before {
+  content: counter(guide-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0; top: 0;
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--red);
+  background: var(--black-2);
+  border: 0.5px solid var(--red);
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.guide-numbered li strong { color: var(--white); font-weight: 500; }
+
+/* CHECKPOINTS (for Google Ads guide) */
+.guide-checkpoint {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.4rem;
+  padding: 1.8rem 0;
+  border-bottom: 0.5px solid var(--black-3);
+  align-items: flex-start;
+}
+.guide-checkpoint:last-child { border-bottom: none; }
+
+.cp-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--red-light);
+  line-height: 1;
+}
+
+.cp-content h3 {
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.cp-content p {
+  font-size: 0.92rem;
+  color: var(--gray-3);
+  margin-bottom: 0.8rem;
+  line-height: 1.75;
+}
+
+.cp-fix {
+  background: var(--black-2);
+  border-left: 2px solid var(--red);
+  padding: 0.8rem 1rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem !important;
+  margin-bottom: 0 !important;
+}
+.cp-fix strong { color: var(--red-light) !important; font-weight: 600; }
+
+/* CTA SECTION */
+.guide-cta-section {
+  background: var(--black-2);
+  border: 0.5px solid var(--black-4);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.guide-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 80%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+}
+.guide-cta-section h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+.guide-cta-section p {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+.guide-cta-actions {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+}
+.guide-cta-note {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem !important;
+  letter-spacing: 1.5px;
+  color: var(--gray-2) !important;
+  margin-top: 0.5rem !important;
+}
+
+/* AUTHOR CARD */
+.guide-author { margin-top: 3rem; }
+.author-card {
+  background: var(--black-2);
+  border: 0.5px solid var(--black-4);
+  border-radius: 4px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.author-info {
+  display: flex; flex-direction: column; gap: 4px;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.5px solid var(--black-4);
+}
+.author-info strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--white);
+}
+.author-info span {
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: var(--gray-2);
+}
+.author-card p {
+  font-size: 0.88rem !important;
+  color: var(--gray-3) !important;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0 !important;
+}
+.author-card p a {
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* GUIDE FOOTER */
+.guide-footer {
+  padding: 2rem 0;
+  border-top: 0.5px solid var(--black-3);
+  background: var(--black-2);
+}
+.guide-footer p {
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  color: var(--gray-1);
+  text-align: center;
+}
+.guide-footer a {
+  color: var(--gray-3);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.guide-footer a:hover { color: var(--red); }
+
+/* PRINT (for "Save as PDF") */
+@media print {
+  body { background: white; color: #1a1a1a; padding-bottom: 0 !important; }
+  .guide-nav, .guide-footer, .guide-cta-section, .back-top, .sticky-cta-bar { display: none !important; }
+  .guide-body { background: white; color: #1a1a1a; }
+  .guide-hero { padding: 1rem 0 2rem; border-bottom: 1px solid #ddd; }
+  .guide-hero h1, .guide-section h2, .cp-content h3, .author-info strong { color: #0a0a0a; }
+  .guide-lede, .guide-section p, .guide-list li, .guide-numbered li, .cp-content p, .author-card p { color: #333; }
+  .guide-toc { background: #f5f5f5; }
+  .guide-toc strong { color: #0a0a0a; }
+  .guide-toc li { color: #333; }
+  .cp-fix { background: #fff3f3; border-left-color: var(--red); }
+  .guide-content { max-width: 100%; }
+  a { color: var(--red); }
+  .guide-section { page-break-inside: avoid; }
+  .guide-checkpoint { page-break-inside: avoid; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .guide-hero { padding: 3rem 0 2.5rem; }
+  .guide-nav .logo-sub { display: none; }
+  .guide-nav-actions .btn-small { padding: 0.5rem 0.7rem; font-size: 0.62rem; }
+  .guide-checkpoint { grid-template-columns: 1fr; gap: 0.6rem; }
+  .cp-num { font-size: 1.6rem; }
+  .guide-cta-section { padding: 2rem 1.4rem; }
+  .guide-cta-actions { flex-direction: column; }
+  .guide-cta-actions .btn { width: 100%; justify-content: center; }
+}
