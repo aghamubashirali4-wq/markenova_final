@@ -1,0 +1,12 @@
+# robots.txt — Markenova Digital
+# https://markenovadigital.com/robots.txt
+
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /.env
+Disallow: /config/
+
+Sitemap: https://markenovadigital.com/sitemap.xml

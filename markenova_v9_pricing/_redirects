@@ -1,0 +1,4 @@
+# Cloudflare Pages _redirects
+
+# Redirect www to non-www (configure DNS accordingly)
+https://www.markenovadigital.com/* https://markenovadigital.com/:splat 301
